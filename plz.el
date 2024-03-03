@@ -365,9 +365,7 @@ NOQUERY is passed to `make-process', which see.
                                    ;; specify that for each other
                                    ;; method.
                                    (pcase method
-                                     ('get
-                                      (list (cons "--dump-header" "-")))
-                                     ((or 'put 'post)
+                                     ((or 'get 'put 'post)
                                       (list (cons "--dump-header" "-")
                                             (cons "--request" (upcase (symbol-name method)))
                                             ;; It appears that this must be the last argument
